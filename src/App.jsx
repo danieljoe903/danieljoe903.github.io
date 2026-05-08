@@ -17,7 +17,7 @@ const [isSending, setIsSending] = useState(false);
 // Runs every time user types in any input.
 function handleChange(e) {
 
-  // Take: input name attribut typed value 
+  // Take: input name attribut typed value cd c
   const { name, value } = e.target;
 
   // Update only one field.
