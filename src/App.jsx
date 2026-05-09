@@ -53,6 +53,10 @@ async function handleSubmit(e) {
     // Wait for FastAPI reply and convert it to JavaScript object.
     const data = await response.json();
 
+    if (!response.ok){
+      throw new Error(data.detail || "failed to send")
+    }
+
     // Show backend message on screen.
     setFormStatus(data.message);
 
