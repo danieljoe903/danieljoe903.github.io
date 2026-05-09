@@ -38,7 +38,7 @@ async function handleSubmit(e) {
   try {
 
     // React sends message to your FastAPI backend.
-    const response = await fetch("http://127.0.0.1:8000/contact", {
+    const response = await fetch("https://portfolio-api-5eul.onrender.com/contact", {
       method: "POST",
 
       // “I am sending JSON data headers
