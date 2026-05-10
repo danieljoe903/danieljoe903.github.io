@@ -60,6 +60,11 @@ async function handleSubmit(e) {
     // Show backend message on screen.
     setFormStatus(data.message);
 
+    // set timeout
+    setTimeout(() => {
+      setFormStatus("");
+    },500);
+
     // Clear all input boxes after success.So form becomes empty again.
     setFormData({
       name: "",
@@ -72,6 +77,9 @@ async function handleSubmit(e) {
 
     // show error meg
     setFormStatus("Failed to send message.");
+    setTimeout(() => {
+      setFormStatus("");
+    },500);
 
     // Whether success or fail: Stop loading mode. Button changes back:
   } finally {
